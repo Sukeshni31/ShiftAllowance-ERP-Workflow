@@ -12,8 +12,6 @@ This project documents and automates the **Shift Allowance Validation** workflow
 
 ---
 
-## 🔄 End-to-End Workflow  
-
 ## 🔄 End-to-End Workflow
 
 ```mermaid
