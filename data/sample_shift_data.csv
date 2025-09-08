@@ -1,0 +1,5 @@
+EmployeeID,Name,Date,PlannedShift,ExceptionApproved,AllowanceApproved,AllowanceType
+E001,Asha,2025-09-01,Night,Yes,Yes,Night
+E002,Ravi,2025-09-01,Day,No,Yes,Night
+E003,Meera,2025-09-01,Night,Yes,Yes,Night
+E002,Ravi,2025-09-15,Day,Yes,Yes,Night
