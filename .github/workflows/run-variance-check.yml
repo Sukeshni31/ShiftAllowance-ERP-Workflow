@@ -1,0 +1,35 @@
+name: Run Variance Checks
+
+on:
+  push:
+    paths:
+      - 'data/**'
+      - 'scripts/variance-checks.py'
+  workflow_dispatch:  # Allows manual run from GitHub Actions tab
+
+jobs:
+  variance-check:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+
+    - name: Install dependencies
+      run: |
+        pip install pandas
+
+    - name: Run Variance Checks Script
+      run: |
+        python scripts/variance-checks.py
+
+    - name: Upload Variance Report
+      uses: actions/upload-artifact@v3
+      with:
+        name: variance-report
+        path: data/variance_report.csv
