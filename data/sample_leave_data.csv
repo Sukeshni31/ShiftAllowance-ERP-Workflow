@@ -1,0 +1,5 @@
+EmployeeID,Date,LeaveStatus
+E001,2025-09-01,Present
+E002,2025-09-01,PTO
+E003,2025-09-01,Holiday
+E002,2025-09-15,Present
