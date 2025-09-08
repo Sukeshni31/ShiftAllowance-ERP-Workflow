@@ -14,10 +14,12 @@ This project documents and automates the **Shift Allowance Validation** workflow
 
 ## 🔄 End-to-End Workflow  
 
+## 🔄 End-to-End Workflow
+
 ```mermaid
 flowchart LR
-  A[Stage 1: Planned Shifts<br/>(ERP Roster / SOW)] --> B[Stage 2: Exception Requests<br/>(ERP + Approvals)]
-  B --> C[Stage 3: Ops Validation<br/>(Business check)]
-  C --> D[Stage 4: Finance Pre-Check<br/>(ERP export + Variance checks)]
-  D --> E[Stage 5: Ops Monitoring<br/>(Weekly flags resolved)]
-  E --> F[Stage 6: Payroll Processing<br/>(Finance sign-off)]
+  A["Stage 1: Planned Shifts<br/>(ERP Roster / SOW)"] --> B["Stage 2: Exception Requests<br/>(ERP + Approvals)"]
+  B --> C["Stage 3: Ops Validation<br/>(Business check)"]
+  C --> D["Stage 4: Finance Pre-Check<br/>(ERP export + Variance checks)"]
+  D --> E["Stage 5: Ops Monitoring<br/>(Weekly flags resolved)"]
+  E --> F["Stage 6: Payroll Processing<br/>(Finance sign-off)"]
