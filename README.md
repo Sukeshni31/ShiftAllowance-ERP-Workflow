@@ -1,23 +1,42 @@
-# Shift Allowance Validation – ERP Exceptions + Leave Reconciliation  
+# Shift Allowance Validation — ERP Exceptions + Leave Reconciliation
 
-This project documents and automates the **Shift Allowance Validation** workflow with **ERP Exceptions** and **Leave Reconciliation** to ensure only validated allowances reach payroll.
-
----
-
-## 🎯 Objectives
-- Centralize **Planned Shifts** (ERP roster/SOW) and **Exceptions** in ERP  
-- Reconcile with **Leave data** (PTO/WO/Holidays)  
-- Detect **variances** weekly before payroll processing  
-- Maintain **audit trail** and approver timestamps  
+Automates shift allowance validation against SAP ERP data and leave records, ensuring only validated allowances reach payroll — with a full audit trail and approver timestamps.
 
 ---
 
-## 🔄 End-to-End Workflow
+## The problem
 
-```mermaid
-flowchart LR
-  A["Stage 1: Planned Shifts<br/>(ERP Roster / SOW)"] --> B["Stage 2: Exception Requests<br/>(ERP + Approvals)"]
-  B --> C["Stage 3: Ops Validation<br/>(Business check)"]
-  C --> D["Stage 4: Finance Pre-Check<br/>(ERP export + Variance checks)"]
-  D --> E["Stage 5: Ops Monitoring<br/>(Weekly flags resolved)"]
-  E --> F["Stage 6: Payroll Processing<br/>(Finance sign-off)"]
+Shift allowances are prone to errors when planned rosters, actual exceptions, and leave data sit in separate systems. Manual reconciliation before payroll is slow, error-prone, and hard to audit.
+
+---
+
+## What this workflow does
+
+- Centralises planned shifts (SAP ERP roster / SOW) and actuals in one view
+- Reconciles against leave data — PTO, week-off, public holidays
+- Detects variances weekly before payroll processing runs
+- Maintains a timestamped audit trail with approver sign-off at each stage
+- Flags exceptions for HR / payroll team review before any allowance is processed
+
+---
+
+## Workflow stages
+
+1. **Roster input** — planned shifts loaded from SAP ERP
+2. **Exception capture** — actual attendance / shift changes recorded
+3. **Leave reconciliation** — cross-checked against approved leave (PTO, WO, holidays)
+4. **Variance detection** — mismatches flagged for review
+5. **Approver sign-off** — timestamped approval before payroll release
+6. **Audit log** — complete record retained per pay cycle
+
+---
+
+## Use case
+
+Generic template adaptable to any organisation running shift-based operations on SAP — manufacturing, healthcare, aviation, GCCs with 24/7 delivery models.
+
+---
+
+## Tech
+
+`Python` `SAP ERP` `Leave Management Integration`
